@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "9134097b-fe1d-48c9-b193-daf46353decc",
+		"name": "kanhasoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "A2U67iHQLRdv89mj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"tushar\",\r\n    \"last_name\":\"joshi\",\r\n    \"mobile\":\"8200768038\",\r\n    \"email\":\"tusharjoshiswb@gmail.com\",\r\n    \"dob\" :\"1999-08-20\" ,\r\n    \"username\":\"tushar_07\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_register",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "A2U67iHQLRdv89mj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"tushar\",\r\n    \"last_name\":\"joshi\",\r\n    \"dob\" :\"1999-08-20\" ,\r\n    \"id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/user/update_register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"user",
+						"update_register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userdelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3100/user/delete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"user",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"tushar_07\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/login/user-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"login",
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "3Ca5VtHqBhjUA0l8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"demo\",\r\n    \"description\":\"demo\",\r\n    \"status\":\"panding\",\r\n    \"priortiy\":\"high\",\r\n    \"reminder\":\"10 minutes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/task/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"task",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "3Ca5VtHqBhjUA0l8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"demo\",\r\n    \"description\":\"demo\",\r\n    \"status\":\"panding\",\r\n    \"priortiy\":\"high\",\r\n    \"reminder\":\"10 minutes\",\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/task/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"task",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "3Ca5VtHqBhjUA0l8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3100/task/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"task",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "user_token",
+						"value": "3Ca5VtHqBhjUA0l8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3100/task/listing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"task",
+						"listing"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
